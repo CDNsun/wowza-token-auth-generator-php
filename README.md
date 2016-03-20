@@ -36,6 +36,9 @@ SAMPLE OUTPUT
 ```
 5351d09e9cdc30cc498703245849ccdc11970c4a328faa77fc75dac3fafef0783e31f9d1d012d4f9dd2fd2659b194a2953d2ad22d8a94014887ca52bd
 ```
+Then append the result to the end of the streaming CDN URL as in the following example:
+```    
+rtmp://12345.r.cdnsun.net/_definst_/live?token=5351d09e9cdc30cc498703245849ccdc11970c4a328faa77fc75dac3fafef0783e31f9d1d012d4f9dd2fd2659b194a2953d2ad22d8a94014887ca52bd
 
 METHOD PARAMETERS
 
