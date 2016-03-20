@@ -2,14 +2,14 @@
 
 class TokenAuthGenerator {
 
-    private $_key = null;
+    public $key = null;
     public $allow = array();
     public $deny = array();
     public $expire = null;
 
     public function setKey($key) 
     {
-        $this->_key = $key;
+        $this->key = $key;
     }
     
     public function setExpire($expire) 
@@ -91,7 +91,7 @@ class TokenAuthGenerator {
         }
 
         $blockSize = mcrypt_get_block_size(MCRYPT_BLOWFISH, MCRYPT_MODE_ECB);
-        $cipher = mcrypt_encrypt('blowfish', $this->_key, $this->pkcs5Pad($token, $blockSize), 'ecb');
+        $cipher = mcrypt_encrypt('blowfish', $this->key, $this->pkcs5Pad($token, $blockSize), 'ecb');
         $secure = sprintf('%s', bin2hex($cipher));
 
         return $secure;
