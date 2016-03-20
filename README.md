@@ -17,12 +17,12 @@ SET EXPIRATION TIME (optional)
 $token->setExpire(1333497600);
 ```
 
-SET ALLOW DOMAIN
+SET ALLOW DOMAIN (optional)
 ```
 $token->setRefAllow(array('domain1.com', 'domain2.com'));
 ```
 
-SET DENY DOMAIN
+SET DENY DOMAIN (optional)
 ```
 $token->setRefDeny(array('domain.com', 'MISSING'));
 ```
