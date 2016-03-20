@@ -2,10 +2,10 @@
 
 class TokenAuthGenerator {
 
-    public $key = null;
-    public $allow = array();
-    public $deny = array();
-    public $expire = null;
+    public $key     = null;
+    public $allow   = array();
+    public $deny    = array();
+    public $expire  = null;
 
     public function setKey($key) 
     {
