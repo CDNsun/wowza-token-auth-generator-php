@@ -47,16 +47,38 @@ class TokenAuthGenerator {
         }        
         if(!empty($allow_domains) && !empty($deny_domains)) 
         {
-            $token .= '&ref_allow=' . $allow_domains;
-            $token .= '&ref_deny=' . $deny_domains;
+            if(empty($token))
+            {
+                $token .= 'ref_allow=' . $allow_domains;
+                $token .= '&ref_deny=' . $deny_domains;
+            }
+            else
+            {
+                $token .= '&ref_allow=' . $allow_domains;
+                $token .= '&ref_deny=' . $deny_domains;
+            }            
         } 
         elseif(!empty($allow_domains)) 
         {
-            $token .= '&ref_allow=' . $allow_domains;
+            if(empty($token))
+            {
+                $token .= 'ref_allow=' . $allow_domains;
+            }
+            else
+            {
+                $token .= '&ref_allow=' . $allow_domains;
+            }
         } 
         elseif(!empty($deny_domains)) 
         {
-            $token .= '&ref_deny=' . $deny_domains;
+            if(empty($token))
+            {
+                $token .= 'ref_deny=' . $deny_domains;
+            }
+            else
+            {
+                $token .= '&ref_deny=' . $deny_domains;
+            }
         }
                 
         return $token;
@@ -78,7 +100,7 @@ class TokenAuthGenerator {
     }
 
     public function toString() 
-    {                
+    {                        
         if($this->expire != null) 
         {
             $token = 'expire=' . $this->expire;
