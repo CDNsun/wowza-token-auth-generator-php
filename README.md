@@ -66,3 +66,7 @@ ALLOW BLANK / MISSING REFERRER
 
   Both "SetRefAllow()" & "setRefDeny()" could be configured to allow/deny blank or missing referrer during Token Auth validation.
 
+CONTACT
+
+* W: https://cdnsun.com
+* E: info@cdnsun.com
